@@ -4,27 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <title>Frontend Mentor | Age calculator app</title>
+  <title>Age calculator app | Abbi Merrill</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
   </head>
 <body>
 
-  Day
-  DD
+  <!-- Styling for mobile first -->
 
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Abbigail Merrill</a>.
+<div class="container" role="main">
+    <div class="inputcontainer">
+  <div>
+    <label for="day">Day</label>
+    <input class="dateInput" type="text" name="day" id="day" placeholder="dd" maxlength="2" type="number">
   </div>
+
+  <div>
+    <label for="month">month</label>
+    <input class="dateInput" type="text" name="month" id="month" placeholder="mm" maxlength="2" type="number">
+  </div>
+    
+  <div>
+    <label for="year">Year</label>
+    <input class="dateInput" type="text" name="year" id="year" placeholder="yyyy" maxlength="4" type="number">
+  </div>
+    </div>
+
+    <div class="line"></div> 
+    <div class="circle">
+      <img class="icon" src="images/icon-arrow.svg" alt="icon">
+    </div>
+
+    <div class="result">
+      <div class="yearVal"> <span class="number">38</span>  years</div>
+      <div class="monthVal"><span class="number">3</span> months</div>
+      <div class="dayVal"><span class="number">26</span> days</div>
+    </div>
+     
+</div>
+  
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a target="_blank" href="https://github.com/abbigailmerrill">Abbigail Merrill</a>.
+</div>
+
+<!-- Add jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<!-- Add personal js doc -->  
+<script src="js/app.js"></script>
+
 </body>
 </html>

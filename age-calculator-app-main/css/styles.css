@@ -1,6 +1,140 @@
 html, body {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(0, 0%, 86%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.container {
+  height: 60%;
+  width: 95%;
+  background-color: white;
+  border-radius: 20px 20px 75px 20px;
+  margin-bottom: 25%;
+}
+
+.attribution {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  background-color: white;
+}
+
+.attribution a {
+  color: blueviolet;
+}
+
+.attribution a:active {
+  color: rgb(102, 32, 168);
+}
+
+.attribution a:visited {
+  color: darkmagenta;
+}
+
+.inputcontainer {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.inputcontainer div {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.dateInput::placeholder {
+  color: black;
+}
+
+.dateInput {
+  width: 85%;
+  height: 40px;
+  outline: none !important;
+  border-radius: 5px;
+  border: 1px solid hsl(0, 1%, 44%);
+  padding-left: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+}
+
+.inputcontainer label {
+  font-family: "Poppins", sans-serif;
+  color: hsl(0, 1%, 44%);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dateInput:focus {
+  border-color: hsl(259, 100%, 65%);
+  outline: none !important;
+}
+
+.line {
+  width: 75%;
+  height: 2px;
+  background-color: gray;
+  margin: 0 auto;
+}
+
+.circle {
+  height: 75px;
+  width: 75px;
+  border-radius: 100%;
+  background-color: hsl(259, 100%, 65%);
+  margin: -35px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  height: 45%;
+}
+
+.result {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.result div {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 3em;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.number {
+  color: hsl(259, 100%, 65%);
 }
 
 /*# sourceMappingURL=styles.css.map */

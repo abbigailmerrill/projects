@@ -1,0 +1,11 @@
+{
+  "name": "newsletter-sign-up",
+  "version": "1.0.0",
+  "description": "A newsletter signup with a success message component",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/styles.scss css/styles.css"
+  },
+  "author": "Abbigail Merrill abbigail.merrill@gmail.com",
+  "license": "ISC"
+}

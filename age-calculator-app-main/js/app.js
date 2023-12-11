@@ -1,3 +1,10 @@
+// Receive validation errors if:
+// X Any field is empty when the form is submitted
+// X The day number is not between 1-31
+// X The month number is not between 1-12
+// X The date is in the future
+// X The date is invalid, e.g. 31/04/1991 (there are 30 days in April)
+
 var inputs = jQuery(".dateInput");
 
 // Replace any item that is not a number, as they are invalid
@@ -24,6 +31,30 @@ var circle = $(".circle").click(function(){
     var monthVal = $('#month').val();
     var yearVal = $('#year').val();
     var theirDate = yearVal + '/' + monthVal + '/' + dayVal;
+
+    // If any input is empty, throw an error
+    if(dayVal == "" || monthVal == "" || yearVal == ""){
+        alert("The form must contain all data to work!");
+        return;
+    }
+
+    // If date is not between 1-31, throw an error
+    if(dayVal > 31 || dayVal < 0){
+        alert("A birthday cant be any number that isn't 1-31!");
+        return;
+    }
+
+    // If a month isnt between 1-12, throw an error
+    if(monthVal > 12 || monthVal < 1){
+        alert("Your month cant be any number less than one or greater than " + curYear + "!");
+        return;
+    }
+
+    // If a year is greater than 2023 or less than 1, throw an error
+    if(yearVal < 1 || yearVal > curYear){
+        alert("Your birth year cant be more than 2023!");
+        return;
+    }
 
     let difference = new Date(curDate).getTime() - new Date (theirDate).getTime();
 

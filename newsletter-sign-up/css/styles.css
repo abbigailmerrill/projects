@@ -136,6 +136,21 @@ input:hover, input:active {
   background-repeat: no-repeat;
 }
 
+.successContainer {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  display: none;
+}
+
+.successDiv {
+  width: 90%;
+}
+
 .attribution {
   width: 100%;
   height: 20px;
@@ -204,6 +219,13 @@ input:hover, input:active {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+  }
+  .successContainer {
+    width: 25%;
+    height: 45%;
+    height: 45%;
+    border-radius: 15px;
   }
 }
 

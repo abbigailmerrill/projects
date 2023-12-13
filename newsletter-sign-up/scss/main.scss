@@ -138,6 +138,22 @@ input:hover, input:active{
     background-repeat: no-repeat;
 }
 
+// Success message design
+.successContainer{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    display: none;
+}
+
+.successDiv{
+    width: 90%;
+}
+
 // position attribution
 .attribution{
     width: 100%;

@@ -1,0 +1,11 @@
+// set dimensions for mobile screen design
+
+@media screen and (max-width: 380px){
+    .main{
+        flex-direction: column;
+    }
+
+    body{
+        display: block;
+    }
+}

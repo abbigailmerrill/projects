@@ -1,0 +1,210 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 16px;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.hero {
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  color: hsl(234, 29%, 20%);
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container p {
+  width: 90%;
+  overflow: hidden;
+}
+
+.container > * {
+  margin-left: 20px;
+}
+
+.container p, .listItem {
+  color: hsl(234, 29%, 20%);
+}
+
+.listItem {
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  margin-left: 0;
+}
+
+.listItem p {
+  width: 75%;
+}
+
+.listItem img {
+  height: 75%;
+  width: 10%;
+}
+
+.inputContainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+label {
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+input {
+  width: 90%;
+  border: 1px solid hsl(231, 7%, 60%);
+  height: 40px;
+  border-radius: 4px;
+  outline: none;
+  margin-top: 5px;
+  padding-left: 20px;
+  color: hsl(234, 29%, 20%);
+}
+
+input::placeholder {
+  color: hsl(231, 7%, 60%);
+}
+
+input:hover, input:active {
+  border: 1px solid hsl(234, 29%, 20%);
+  color: hsl(234, 29%, 20%);
+}
+
+.button {
+  height: 40px;
+  border-radius: 4px;
+  background-color: hsl(234, 29%, 20%);
+  color: white;
+  width: 92%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: none;
+  background-image: linear-gradient(to right, hsl(4, 100%, 67%), orange);
+}
+
+.button:active {
+  background-color: hsl(4, 100%, 67%);
+  background-image: none;
+}
+
+.desktopImg {
+  display: none;
+  height: 95%;
+  width: 50%;
+  background-image: url("../images/illustration-sign-up-desktop.svg");
+  background-repeat: no-repeat;
+}
+
+.attribution {
+  width: 100%;
+  height: 20px;
+  background-color: hsl(234, 29%, 20%);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: cornflowerblue;
+}
+
+.attribution * {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.attribution a {
+  color: white;
+}
+
+.attribution a:hover {
+  color: grey;
+  transition: 1s;
+}
+
+.attribution a:visited {
+  color: hsl(235, 57%, 61%);
+}
+
+@media screen and (max-width: 380px) {
+  .main {
+    flex-direction: column;
+  }
+  body {
+    display: block;
+  }
+}
+@media screen and (min-width: 390px) {
+  .main {
+    flex-direction: row;
+  }
+  .hero {
+    display: none;
+  }
+  .container {
+    height: 70%;
+    width: 40%;
+    margin-left: 5%;
+  }
+  .desktopImg {
+    display: flex;
+    margin-left: 20%;
+  }
+  .main {
+    height: 70%;
+    width: 85%;
+    border-radius: 8px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+  }
+  body {
+    background-color: hsl(235, 18%, 26%) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

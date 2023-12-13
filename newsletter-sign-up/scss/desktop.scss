@@ -1,0 +1,36 @@
+@media screen and (min-width: 390px){
+    .main{
+        flex-direction: row;
+    }
+
+    .hero{
+        display: none;
+    }
+
+    .container{
+        height: 70%;
+        width: 40%;
+        margin-left: 5%;
+    }
+
+    .desktopImg{
+        display: flex;
+        margin-left: 20%;
+    }
+
+    .main{
+        height: 70%;
+        width: 85%;
+        border-radius: 8px;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body{
+        background-color: hsl(235, 18%, 26%)!important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

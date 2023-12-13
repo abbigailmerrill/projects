@@ -151,6 +151,10 @@ input:hover, input:active {
   width: 90%;
 }
 
+.email {
+  font-weight: 700;
+}
+
 .attribution {
   width: 100%;
   height: 20px;

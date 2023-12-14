@@ -50,6 +50,14 @@ h1 {
   cursor: pointer;
 }
 
+.circle:hover {
+  box-shadow: 0 0 40px 20px hsl(150, 100%, 66%);
+}
+
+.circle:focus {
+  box-shadow: 0 0 40px 20px hsl(150, 100%, 66%);
+}
+
 @media screen and (max-width: 415px) {
   .adviceContainer {
     height: 50%;

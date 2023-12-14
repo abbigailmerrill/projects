@@ -4,8 +4,8 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 
 ## My Solution
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Test it here](https://abbigailmerrill.github.io/projects/advice-generator-app/)
+- Solution URL: [See my solution here](https://github.com/abbigailmerrill/projects/tree/main/advice-generator-app)
 
 ## My process
 

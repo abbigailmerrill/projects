@@ -1,0 +1,17 @@
+{
+  "name": "advice-generator-app",
+  "version": "1.0.0",
+  "description": "A simple advice generator app using the advice slip json API",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/styles.scss css/styles.css"
+  },
+  "keywords": [
+    "json",
+    "API",
+    "jQuery",
+    "SaSS"
+  ],
+  "author": "Abbigail Merrill abbigail.merrill@gmail.com",
+  "license": "ISC"
+}

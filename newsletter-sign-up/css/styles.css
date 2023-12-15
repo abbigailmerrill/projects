@@ -29,7 +29,7 @@ h1 {
 }
 
 .container {
-  width: 100%;
+  width: --webkit-fill-available;
   height: auto;
   display: flex;
   align-items: flex-start;
@@ -43,11 +43,21 @@ h1 {
 }
 
 .container > * {
-  margin-left: 20px;
+  margin: auto 20px;
 }
 
 .container p, .listItem {
   color: hsl(234, 29%, 20%);
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 50%;
+  width: 100%;
 }
 
 .listItem {
@@ -55,7 +65,6 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
   width: 100%;
   margin-left: 0;
 }
@@ -65,8 +74,8 @@ h1 {
 }
 
 .listItem img {
-  height: 75%;
-  width: 10%;
+  height: 100%;
+  width: 25%;
 }
 
 .inputContainer {
@@ -86,7 +95,7 @@ label {
 }
 
 input {
-  width: 90%;
+  width: 85%;
   border: 1px solid hsl(231, 7%, 60%);
   height: 40px;
   border-radius: 4px;
@@ -106,16 +115,15 @@ input:hover, input:active {
 }
 
 .button {
-  height: 40px;
+  text-align: center;
+  padding: 10px 25px;
+  width: 75%;
   border-radius: 4px;
   background-color: hsl(234, 29%, 20%);
   color: white;
-  width: 92%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-top: 20px;
   cursor: pointer;
+  border: none;
 }
 
 .button:hover {
@@ -149,6 +157,10 @@ input:hover, input:active {
 
 .successDiv {
   width: 90%;
+}
+
+.successDiv p {
+  font-size: 14px;
 }
 
 .email {
@@ -193,6 +205,9 @@ input:hover, input:active {
   body {
     display: block;
   }
+  .list {
+    width: 75%;
+  }
 }
 @media screen and (min-width: 413px) {
   .main {
@@ -226,9 +241,8 @@ input:hover, input:active {
     flex-direction: column;
   }
   .successContainer {
-    width: 25%;
-    height: 45%;
-    height: 45%;
+    width: 35%;
+    height: 50%;
     border-radius: 15px;
   }
 }

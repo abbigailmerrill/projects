@@ -1,0 +1,16 @@
+{
+  "name": "notifications-page-main",
+  "version": "1.0.0",
+  "description": "Simple notifications page",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/styles.scss css/styles.css"
+  },
+  "keywords": [
+    "Abbigail",
+    "Merrill",
+    "abbigail.merrill@gmail.com"
+  ],
+  "author": "Abbigail Merrill abbigail.merrill@gmail.com",
+  "license": "ISC"
+}

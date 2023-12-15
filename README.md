@@ -3,7 +3,9 @@
 
 # Projects - most recent at the top
 [Advice Generator App](https://abbigailmerrill.github.io/projects/advice-generator-app/)
+
 [Newsletter Signup With Success Message](https://abbigailmerrill.github.io/projects/newsletter-sign-up/)
+
 [Age Calculator App](https://abbigailmerrill.github.io/projects/age-calculator-app-main/index.html)
 
 

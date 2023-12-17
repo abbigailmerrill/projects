@@ -57,6 +57,11 @@ h1 {
   cursor: pointer;
 }
 
+.notifBar p:hover {
+  color: hsl(219, 85%, 26%);
+  font-weight: 800;
+}
+
 .content {
   height: 100%;
   width: 100%;
@@ -135,6 +140,44 @@ h1 {
   border: 1px solid hsl(205, 33%, 90%);
   padding: 10px;
   box-sizing: border-box;
+}
+
+@media screen and (min-width: 420px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(205, 33%, 90%);
+    flex-direction: column;
+  }
+  .notifBar {
+    background-color: white;
+  }
+  .content {
+    height: 70%;
+    background-color: white;
+    width: 80%;
+    margin: 25px;
+    border-radius: 8px;
+  }
+}
+@media screen and (min-width: 740px) {
+  .action.hasMessage img {
+    height: 25%;
+    margin-bottom: 20%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .action.hasMessage img {
+    height: 25%;
+    margin-bottom: 15%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .action.hasMessage img {
+    height: 25%;
+    margin-bottom: 10%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

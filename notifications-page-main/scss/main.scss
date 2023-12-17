@@ -59,6 +59,11 @@ h1{
     cursor: pointer;
 }
 
+.notifBar p:hover{
+    color: hsl(219, 85%, 26%);
+    font-weight: 800;
+}
+
 // begin content styling
 .content{
     height: 100%;

@@ -1,0 +1,141 @@
+// CSS presets
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body{
+    height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin-bottom: 16px;
+}
+
+// begin header styling
+
+.notifBar{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 1em;
+    font-weight: 800;
+}
+
+.content{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notifBar div:not(.notNum){
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.notNum{
+    margin: 0 0 8px 6px;
+    color: white;
+    background-color: hsl(219, 85%, 26%);
+    border-radius: 5px;
+    padding: 2px 10px;
+}
+
+.notifBar p{
+    font-size: 12px;
+    color: hsl(219, 14%, 63%);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+// begin content styling
+.content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-bottom: 5px;
+}
+
+.action{
+    height: 75px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.action.unread{
+    background-color: hsl(210, 60%, 98%);
+}
+
+.action img{
+    height: 50%;
+    margin: 0 10px 0 10px;
+}
+
+.actionDiv{
+    height: 70%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.actionDiv .userName{
+    font-weight: 800;
+}
+
+.actionDiv .postName{
+    color: gray;
+    font-weight: 800;
+}
+
+.timeAgo{
+    color: hsl(219, 14%, 63%);
+}
+
+.unread .postName::after{
+    content: "•";
+    padding-left: 5px;
+    color: hsl(1, 90%, 64%);
+}
+
+.actionDiv .postName.club {
+    color: hsl(219, 85%, 26%);
+    font-weight: 800;
+}
+
+.action.hasMessage img {
+    height: 25%;
+    margin-bottom: 25%;
+}
+
+.action.hasMessage{
+    height: 180px;
+}
+
+.message{
+    height: auto;
+    width: 80%;
+    border: 1px solid hsl(205, 33%, 90%);
+    padding: 10px;
+    box-sizing: border-box;
+}

@@ -6,35 +6,101 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <title>Notifications page | Abbi Merrill</title>
   <link rel="stylesheet" href="css/styles.css">
+  <!-- Import external fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  Notifications 3
+  <div class="notifBar">
+    <div>
+      <h1>Notifications</h1><div class="notNum">3</div>
+    </div>
 
-  Mark all as read
+    <p>Mark all as read</p>
+  </div> 
 
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
+  <section class="content">
+    <div class="action unread">
+      <img src="images/avatar-mark-webber.webp" alt="profilePic">
+      <div class="actionDiv">
+          <div class="actionContent"><span class="userName">Mark Webber</span> reacted to your recent post <span class="postName"> My first tournament today!</span>
 
-  Angela Gray followed you
-  5m ago
+            <p class="timeAgo">1m ago</p>
+          </div>
+      </div>
+    </div>
 
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
+    <div class="action unread">
+      <img src="images/avatar-angela-gray.webp" alt="profilePic">
+      <div class="actionDiv">
+          <div class="actionContent"><span class="userName">Angela Gray</span> followed you. <span class="postName"></span>
+            <p class="timeAgo">5m ago</p>
+          </div>
+      </div>
+    </div>
 
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
+    <div class="action unread">
+      <img src="images/avatar-jacob-thompson.webp" alt="profilePic">
+      <div class="actionDiv">
+          <div class="actionContent"><span class="userName">Jacob Thompson</span> has joined your group <span class="postName club"> Chess Club</span>
 
-  Kimberly Smith commented on your picture
-  1 week ago
+            <p class="timeAgo">1 day ago</p>
+          </div>
+      </div>
+    </div>
 
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
+    <div class="action hasMessage">
+      <img src="images/avatar-rizky-hasanuddin.webp" alt="profilePic">
+      <div class="actionDiv">
+          <div class="actionContent"><span class="userName">Rizky Hasanuddin </span>sent you a private message<span class="postName club"></span>
+
+            <p class="timeAgo">5 days ago</p>
+
+            <div class="message">
+              Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="action">
+      <img src="images/avatar-kimberly-smith.webp" alt="profilePic">
+      <div class="actionDiv">
+          <div class="actionContent"><span class="userName">Kimberly Smith</span> commented on your picture<span class="postName club"> Chess Club</span>
+
+            <p class="timeAgo">1 week ago</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="action">
+      <img src="images/avatar-nathan-peterson.webp" alt="profilePic">
+      <div class="actionDiv">
+          <div class="actionContent"><span class="userName">Nathan Peterson</span> reacted to your recent post <span class="postName"> 5 end-game strategies to increase your win rate</span>
+
+            <p class="timeAgo">2 weeks ago</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="action">
+      <img src="images/avatar-anna-kim.webp" alt="profilePic">
+      <div class="actionDiv">
+          <div class="actionContent"><span class="userName">Anna Kim</span> left the group <span class="postName club"> Chess Club</span>
+
+            <p class="timeAgo">2 weeks ago</p>
+          </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!--
 
   Anna Kim left the group Chess Club
-  2 weeks ago
+  2 weeks ago -->
   
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="js/app.js"></script>

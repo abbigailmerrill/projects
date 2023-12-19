@@ -1,0 +1,11 @@
+{
+  "name": "simple-todo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/styles.scss css/styles.css"
+  },
+  "author": "Abbigail Merrill abbigail.merrill@gmail.com",
+  "license": "ISC"
+}

@@ -8,5 +8,9 @@
 
 [Age Calculator App](https://abbigailmerrill.github.io/projects/age-calculator-app-main/index.html)
 
+[Notifications Page](https://abbigailmerrill.github.io/projects/notifications-page-main/)
+
+[Simple Todo App](https://abbigailmerrill.github.io/projects/simple-todo-app/)
+
 
 Do you like what you see? Contact me at [abbigail.merrill@gmail.com](mailto:abbigail.merrill@gmail.com) 📨

@@ -14,20 +14,28 @@ html,body{
     background-color: hsl(235, 21%, 11%);
 }
 
+.main.light{
+    background-color: hsl(236, 33%, 92%);
+}
+
 .hero{
     height: 30%;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left;
+    background-size: 100%;
+    background-position: top;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
 }
 
-.mobile{
+.darkHero{
     background-image: url("../images/bg-mobile-dark.jpg");
+}
+
+.lightHero{
+    background-image: url("../images/bg-mobile-light.jpg")
 }
 
 .headerContent{
@@ -45,26 +53,46 @@ html,body{
     letter-spacing: 1rem;
 }
 
-.headerContent img{
+.modeIcon{
     cursor: pointer;
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.darkIcon{
+    background-image: url("../images/icon-moon.svg");
+}
+
+.lightIcon{
+    background-image: url("../images/icon-sun.svg");
 }
 
 input{
     height: 50px;
     border: none;
-    background-color: hsl(235, 24%, 19%);
-    width: 90%;
-    border-radius: 3px;
+    width: 365px;
+    border-radius: 5px;
     background-image: url("../images/unchecked.png");
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: 25px 15px;
     padding-left: 55px;
-    color: hsl(234, 11%, 52%);
-    caret-color: hsl(234, 11%, 52%);
     box-sizing: border-box;
     outline: none;
     margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+input.darkInput{
+    background-color: hsl(235, 24%, 19%);
+    color: hsl(234, 11%, 52%);
+    caret-color: hsl(234, 11%, 52%);
+}
+
+input.lightInput, {
+    background-color: white;
 }
 
 input::placeholder{
@@ -73,26 +101,46 @@ input::placeholder{
 
 .todoContent{
     height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 ul{
-    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 ul li{
     min-height: 50px;
     border-bottom: 1px solid hsl(234, 11%, 52%);
-    width: 90%;
+    width: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: hsl(234, 39%, 85%);
     position: relative;
     user-select: none;
-    background: hsl(235, 24%, 19%);
     flex-wrap: wrap;
     font-size: 12px;
     padding: 5px;
+}
+
+ul li.darkList{
+    background-color: hsl(235, 24%, 19%);
+}
+
+ul li.lightList{
+    background-color: white;
+    color: hsl(235, 24%, 19%);
+}
+
+ul li:first-of-type{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 ul li::before{
@@ -103,14 +151,14 @@ ul li::before{
     border-radius: 50%;
     background-image: url("../images/unchecked.png");
     background-size: cover;
-    top: 12px;
+    top: 20px;
     left: 8px;
 }
 
 ul li span:not(.item){
     position: absolute;
     right: 0;
-    top: 5px;
+    top: 10px;
     width: 40px;
     height: 40px;
     font-size: 22px;
@@ -125,14 +173,23 @@ ul li .item{
 }
 
 .actions{
-    width: 93%;
+    width: 360px;
     height: 50px;
-    background-color:hsl(235, 24%, 19%);
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 12px;
     color:hsl(234, 11%, 52%);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.darkActions{
+    background-color:hsl(235, 24%, 19%);
+}
+
+.lightActions{
+    background-color: white;
 }
 
 .itemsLeft{
@@ -142,4 +199,42 @@ ul li .item{
 .clear{
     margin-right: 20px;
     cursor: pointer;
+}
+
+.filter{
+    height: 50px;
+    width: 360px;
+    margin-top: 10px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.darkFilter{
+    background-color: hsl(235, 24%, 19%);
+}
+
+.lightFilter{
+    background-color:white;
+}
+
+.filter p{
+    font-size: 12px;
+    text-transform: capitalize;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: hsl(234, 11%, 52%);
+}
+
+p.active{
+    color: hsl(220, 98%, 61%);
+    font-weight: 700;
+}
+
+h3{
+    font-size: 12px;
+    margin: 20px;
+    color: hsl(234, 11%, 52%);
 }

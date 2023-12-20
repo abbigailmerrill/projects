@@ -2,11 +2,43 @@ const icon = jQuery(".modeIcon");
 const mainColor = jQuery(".main");
 const hero = jQuery(".hero");
 const input = jQuery("input");
-const list = jQuery("li");
 const actions = jQuery(".actions");
 const filter = jQuery(".filter");
+const listContainer = jQuery(".list-container");
+const formData = jQuery("form");
+
+// toggle light and dark mode
+
+formData.submit(function(e){
+    e.preventDefault();
+
+    if(input.val() === ''){
+        alert("You must write something!");
+    }else{
+    // submit item to list on enter 
+        let li = document.createElement("li");
+
+        if(jQuery(".main").hasClass("light")){
+            li.classList.add("lightList");
+            console.log("its light");
+        }else if(jQuery(".main").hasClass("dark")){
+            li.classList.add("darkList");
+            console.log("its dark")
+        }
+
+    li.innerHTML = input.val();
+    let span = document.createElement("span");
+    span.classList.add("item");
+    listContainer.append(li);
+    let close = document.createElement("span");
+    close.innerHTML = "\u00d7";
+    li.append(close);
+    }
+    input.val("");
+})
 
 icon.click(function(){
+    const list = jQuery("li");
     if(mainColor.hasClass("dark")){
         // toggle main bg color
         mainColor.removeClass("dark");
@@ -52,4 +84,5 @@ icon.click(function(){
         icon.removeClass("lightIcon");
         icon.addClass("darkIcon");
     }
-})
+});
+

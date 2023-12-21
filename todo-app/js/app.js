@@ -106,7 +106,7 @@ icon.click(function(){
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
-        // e.target.classList.add("complete");
+        e.target.classList.add("complete");
         e.target.classList.remove("active");
     }else if(e.target.className === "close"){
         e.target.parentElement.remove();
@@ -123,7 +123,7 @@ listContainer.addEventListener("click", function(e){
 const actionBar = document.getElementById("actions");
 actionBar.addEventListener("click", function(e){
     if(e.target.className === "clear"){
-        const items = jQuery(".checked");
+        const items = jQuery(".complete");
         items.remove();
         // update list count
         listCount = jQuery(".listItems");
@@ -131,6 +131,7 @@ actionBar.addEventListener("click", function(e){
         listCount.empty();
         listCount.append(listArray);
     }
+    saveData();
 });
 
 // Filter items in the list
@@ -150,6 +151,7 @@ filters.addEventListener("click", function(e){
         complete.css("display", "flex");
         incomplete.css("display", "none");
     }
+
 });
 
 // testing drag and drop

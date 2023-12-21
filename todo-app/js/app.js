@@ -99,7 +99,6 @@ icon.click(function(){
         icon.removeClass("lightIcon");
         icon.addClass("darkIcon");
     }
-    saveData();
 });
 
 // complete or close items
@@ -194,8 +193,7 @@ function handleDrop(e) {
     targetItem.style.borderBottom = '';
     draggedItem.style.opacity = '';
     draggedItem = null;
-  }
-
+}
 //save content to local storage
 function saveData(){
     localStorage.setItem("data", listContainer.innerHTML)
@@ -212,3 +210,16 @@ function showData(){
 }
 
 showData();
+
+const listItems = jQuery("li");
+
+
+// show close on item hover
+listItems.hover(
+    function(){
+        $(this).find(".close").css("display", "block")
+    }, 
+    function(){
+        $(this).find(".close").css("display", "none")
+    }
+)

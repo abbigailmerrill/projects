@@ -1,0 +1,10 @@
+// change desktop hero images
+@media screen and (min-width: 600px){
+    .main.dark .hero{
+        background-image: url("../images/bg-desktop-dark.jpg");
+    }
+
+    .main.light .hero{
+        background-image: url("../images/bg-desktop-light.jpg");
+    }
+}

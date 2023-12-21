@@ -261,4 +261,31 @@ ul li.checked::before {
   cursor: pointer;
 }
 
+.main.light #filter p:hover, .main.light #actions .clear:hover {
+  color: hsl(235, 24%, 19%);
+  font-weight: 800;
+}
+
+.main.dark #filter p:hover, .main.dark .clear:hover {
+  color: white;
+  font-weight: 800;
+}
+
+.close {
+  display: none;
+}
+
+.item:hover + .close {
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  .main.dark .hero {
+    background-image: url("../images/bg-desktop-dark.jpg");
+  }
+  .main.light .hero {
+    background-image: url("../images/bg-desktop-light.jpg");
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

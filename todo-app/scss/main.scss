@@ -260,3 +260,21 @@ ul li.checked::before{
 #filter p{
     cursor: pointer;
 }
+
+.main.light #filter p:hover, .main.light #actions .clear:hover{
+    color:hsl(235, 24%, 19%);
+    font-weight: 800;
+}
+
+.main.dark #filter p:hover, .main.dark .clear:hover{
+    color: white;
+    font-weight: 800;
+}
+
+.close{
+    display: none;
+}
+
+.item:hover + .close{
+    display: block;
+}

@@ -3,6 +3,8 @@
 
 # Projects - most recent at the top
 
+[Advanced Todo app](https://abbigailmerrill.github.io/projects/todo-app/)
+
 [Simple Todo App](https://abbigailmerrill.github.io/projects/simple-todo-app/)
 
 [Notifications Page](https://abbigailmerrill.github.io/projects/notifications-page-main/)

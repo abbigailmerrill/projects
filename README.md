@@ -1,7 +1,7 @@
 # My Projects
 😍 This is where I keep all of my projects! Personal, challenges, and some freelance alike!
 
-# Projects - most recent at the top
+# Live Project sites (most recent at the top!)
 
 [Advanced Todo app](https://abbigailmerrill.github.io/projects/todo-app/)
 

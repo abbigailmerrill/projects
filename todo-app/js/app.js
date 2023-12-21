@@ -48,7 +48,7 @@ formData.submit(function(e){
     //     var listItems = listArray[i];
     //     console.log(listItems);
     // }
-    
+    saveData();
 })
 
 // toggle light and dark mode
@@ -99,6 +99,7 @@ icon.click(function(){
         icon.removeClass("lightIcon");
         icon.addClass("darkIcon");
     }
+    saveData();
 });
 
 // complete or close items
@@ -115,6 +116,7 @@ listContainer.addEventListener("click", function(e){
         listCount.empty();
         listCount.append(listArray);
     }
+    saveData();
 });
 
 // clear completed list items
@@ -129,6 +131,7 @@ actionBar.addEventListener("click", function(e){
         listCount.empty();
         listCount.append(listArray);
     }
+    saveData();
 });
 
 // Filter items in the list
@@ -148,6 +151,7 @@ filters.addEventListener("click", function(e){
         complete.css("display", "flex");
         incomplete.css("display", "none");
     }
+    saveData();
 });
 
 // testing drag and drop
@@ -191,3 +195,20 @@ function handleDrop(e) {
     draggedItem.style.opacity = '';
     draggedItem = null;
   }
+
+//save content to local storage
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML)
+}
+
+function showData(){
+    listContainer.innerHTML = localStorage.getItem("data");
+
+    // update list count
+    listCount = jQuery(".listItems");
+    const listArray = jQuery("li").length.toString();
+    listCount.empty();
+    listCount.append(listArray);
+}
+
+showData();

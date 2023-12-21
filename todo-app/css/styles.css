@@ -257,4 +257,8 @@ ul li.checked::before {
   left: 8px;
 }
 
+#filter p {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=styles.css.map */

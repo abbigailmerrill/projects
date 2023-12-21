@@ -24,10 +24,10 @@ Your users should be able to:
 X Add new todos to the list
 X Mark todos as complete
 X Delete todos from the list
+X Filter by all/active/complete todos
+X Clear all completed todos
+X Toggle light and dark mode
 
-- Filter by all/active/complete todos
-- Clear all completed todos
-  X Toggle light and dark mode
 - **Bonus**: Drag and drop to reorder items on the list
 
 Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.

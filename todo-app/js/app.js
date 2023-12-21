@@ -7,7 +7,7 @@ const filter = jQuery(".filter");
 const listContainer = document.getElementById("list-container");
 const formData = jQuery("form");
 
-// toggle light and dark mode
+// submit item to list
 formData.submit(function(e){
     e.preventDefault();
 
@@ -17,7 +17,8 @@ formData.submit(function(e){
     // submit item to list on enter 
         let li = document.createElement("li");
         li.classList.add("active");
-
+        li.classList.add("drag-item");
+        li.setAttribute("draggable", "true");
         if(jQuery(".main").hasClass("light")){
             li.classList.add("lightList");
             // console.log("its light");
@@ -39,13 +40,18 @@ formData.submit(function(e){
 
     // update list count
     listCount = jQuery(".listItems");
-    const listArray = jQuery("li");
+    const listArray = jQuery("li").length.toString();
+    listCount.empty();
+    listCount.append(listArray);
 
     // for(var i = 0; i > listArray.length; i ++){
-    //     console.log( listArray[i]
+    //     var listItems = listArray[i];
+    //     console.log(listItems);
     // }
+    
 })
 
+// toggle light and dark mode
 icon.click(function(){
     const list = jQuery("li");
     if(mainColor.hasClass("dark")){
@@ -95,6 +101,7 @@ icon.click(function(){
     }
 });
 
+// complete or close items
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
@@ -102,7 +109,85 @@ listContainer.addEventListener("click", function(e){
         e.target.classList.remove("active");
     }else if(e.target.className === "close"){
         e.target.parentElement.remove();
+
+        listCount = jQuery(".listItems");
+        const listArray = jQuery("li").length.toString();
+        listCount.empty();
+        listCount.append(listArray);
     }
 });
 
+// clear completed list items
+const actionBar = document.getElementById("actions");
+actionBar.addEventListener("click", function(e){
+    if(e.target.className === "clear"){
+        const items = jQuery(".complete");
+        items.remove();
+        // update list count
+        listCount = jQuery(".listItems");
+        const listArray = jQuery("li").length.toString();
+        listCount.empty();
+        listCount.append(listArray);
+    }
+});
 
+// Filter items in the list
+const filters = document.getElementById("filter");
+filters.addEventListener("click", function(e){
+    var allItems = jQuery("li");
+    var complete = jQuery("li:not(.active)");
+    var incomplete = jQuery(".active");
+
+    if(e.target.id === "all"){
+        allItems.css("display", "flex");
+    }else if(e.target.id === "viewActive"){
+        complete.css("display", "none");
+        incomplete.css("display", "flex");
+
+    }else if(e.target.id === "viewComplete"){
+        complete.css("display", "flex");
+        incomplete.css("display", "none");
+    }
+});
+
+// testing drag and drop
+let draggedItem = null;
+// add event listeners for drag and drop events
+listContainer.addEventListener('dragstart', handleDragStart);
+listContainer.addEventListener('dragover', handleDragOver);
+listContainer.addEventListener('drop', handleDrop);
+
+// drag start event handler
+function handleDragStart(e){
+    draggedItem = e.target;
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/html', draggedItem.innerHTML);
+    e.target.css("opacity", "0.5");
+}
+
+// drag event handler
+function handleDragOver(e){
+    e.preventDefault();
+    e.dataTransfer.dropEffect('move');
+    const targetItem = e.target;
+    if(targetItem !== draggedItem && targetItem.classList.contains("drag-item")){
+        const boundingRect = targetItem.getBoundingClientRect();
+        const offset = boundingRect.y + (boundingRect.height / 2);
+    }
+}
+
+function handleDrop(e) {
+    e.preventDefault();
+    const targetItem = e.target;
+    if (targetItem !== draggedItem && targetItem.classList.contains('drag-item')) {
+      if (e.clientY > targetItem.getBoundingClientRect().top + (targetItem.offsetHeight / 2)) {
+        targetItem.parentNode.insertBefore(draggedItem, targetItem.nextSibling);
+      } else {
+        targetItem.parentNode.insertBefore(draggedItem, targetItem);
+      }
+    }
+    targetItem.style.borderTop = '';
+    targetItem.style.borderBottom = '';
+    draggedItem.style.opacity = '';
+    draggedItem = null;
+  }

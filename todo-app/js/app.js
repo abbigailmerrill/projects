@@ -4,11 +4,10 @@ const hero = jQuery(".hero");
 const input = jQuery("input");
 const actions = jQuery(".actions");
 const filter = jQuery(".filter");
-const listContainer = jQuery(".list-container");
+const listContainer = document.getElementById("list-container");
 const formData = jQuery("form");
 
 // toggle light and dark mode
-
 formData.submit(function(e){
     e.preventDefault();
 
@@ -17,13 +16,14 @@ formData.submit(function(e){
     }else{
     // submit item to list on enter 
         let li = document.createElement("li");
+        li.classList.add("active");
 
         if(jQuery(".main").hasClass("light")){
             li.classList.add("lightList");
-            console.log("its light");
+            // console.log("its light");
         }else if(jQuery(".main").hasClass("dark")){
             li.classList.add("darkList");
-            console.log("its dark")
+            // console.log("its dark")
         }
 
     li.innerHTML = input.val();
@@ -31,10 +31,19 @@ formData.submit(function(e){
     span.classList.add("item");
     listContainer.append(li);
     let close = document.createElement("span");
+    close.classList.add("close");
     close.innerHTML = "\u00d7";
-    li.append(close);
+    li.appendChild(close);
     }
     input.val("");
+
+    // update list count
+    listCount = jQuery(".listItems");
+    const listArray = jQuery("li");
+
+    // for(var i = 0; i > listArray.length; i ++){
+    //     console.log( listArray[i]
+    // }
 })
 
 icon.click(function(){
@@ -85,4 +94,15 @@ icon.click(function(){
         icon.addClass("darkIcon");
     }
 });
+
+listContainer.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+        e.target.classList.add("complete");
+        e.target.classList.remove("active");
+    }else if(e.target.className === "close"){
+        e.target.parentElement.remove();
+    }
+});
+
 

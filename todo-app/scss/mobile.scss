@@ -1,0 +1,12 @@
+@media screen and (max-width: 374px){
+    input, .actions, .filter{
+        width: 300px;
+        margin-left: 0;
+    }
+
+    ul li{
+        width: 300px;
+        margin-left: -40px;
+        padding: 0;
+    }
+}

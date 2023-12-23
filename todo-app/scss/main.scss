@@ -276,5 +276,5 @@ ul li.checked::before{
 }
 
 .item:hover + .close{
-    display: block;
+    display: block !important;
 }

@@ -35,7 +35,9 @@ formData.submit(function(e){
     close.classList.add("close");
     close.innerHTML = "\u00d7";
     li.appendChild(close);
+
     }
+
     input.val("");
 
     // update list count
@@ -44,10 +46,6 @@ formData.submit(function(e){
     listCount.empty();
     listCount.append(listArray);
 
-    // for(var i = 0; i > listArray.length; i ++){
-    //     var listItems = listArray[i];
-    //     console.log(listItems);
-    // }
     saveData();
 })
 
@@ -213,13 +211,32 @@ showData();
 
 const listItems = jQuery("li");
 
-
 // show close on item hover
-listItems.hover(
-    function(){
-        $(this).find(".close").css("display", "block")
-    }, 
-    function(){
-        $(this).find(".close").css("display", "none")
+// listItems.hover(
+//     function(){
+//         $(this).find(".close").css("display", "block")
+//     }, 
+//     function(){
+//             $(this).find(".close").css("display", "none")
+//     }
+// )
+
+
+// append close on mobile screens since hover is not possible (code snippet from https://stackoverflow.com/questions/12083508/jquery-window-width-else-if-statement)
+$(document).ready(function() {
+    function checkWidth() {
+        var windowSize = $(window).width();
+
+        if (windowSize <= 374 ) {
+            // console.log("screen width is less than 374");
+            jQuery(".close").css("display", "flex");
+            jQuery(".close").css("display", "flex");
+        }
     }
-)
+
+    // Execute on load
+    checkWidth();
+
+    // Bind event listener
+    $(window).resize(checkWidth);
+});

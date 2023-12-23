@@ -276,9 +276,20 @@ ul li.checked::before {
 }
 
 .item:hover + .close {
-  display: block;
+  display: block !important;
 }
 
+@media screen and (max-width: 374px) {
+  input, .actions, .filter {
+    width: 300px;
+    margin-left: 0;
+  }
+  ul li {
+    width: 300px;
+    margin-left: -40px;
+    padding: 0;
+  }
+}
 @media screen and (min-width: 600px) {
   .main.dark .hero {
     background-image: url("../images/bg-desktop-dark.jpg");
